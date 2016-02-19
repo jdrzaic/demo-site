@@ -1,0 +1,223 @@
+html {
+    /*background-color: blue;*/
+}
+body {
+    margin: 1% 0 0 0;
+    background-position: center top;  
+    background-image:  url(background5.jpg);
+    background-repeat: repeat-y; 
+    background-size: cover; 
+    font-family: 'Indie Flower', monospace; /*ako ne radi Indie Flower*/
+    color: #B29563;
+    text-shadow: -1px -1px #000000; /*tekst sjena*/
+}
+.articl_hidden {
+    display: none; /* spoiler*/
+}
+
+.spoiler {
+    background-color: rgba(50, 37, 19, 0.95); /*rjesenja*/
+}
+
+.zaglavlje, .articr, #pitagora>h2, #razlomci>h2, .articl /*lijeva strana articl*/, .app /*torte*/, .mailto, .popis_l, .novosti {
+    box-shadow: 10px 10px 20px #00000F;
+    background-color: rgba(50, 37, 19, 0.89);
+    /*border-radius: 1em;*/
+    padding: 1%; /*praznina sa strane*/
+}
+.novosti{
+    font-size: 1.2em;
+    margin: 0 0 0 2%; /*lijevo 2%*/
+    width: 60%;/*sirina boxa*/
+    float: left;/*zaljepljeno lijevo*/
+    padding-top: 1%;
+}
+.novosti>h2 {
+    font-size: 1.6em;
+    font-weight: 800;
+}
+#pitagora {
+    margin-bottom:20%; /*donja margina nakon dijela o p.poučku*/
+}
+#pitagora>h2,#razlomci>h2 { /*naslovi odjeljaka zasticeni od slika zdesna*/
+    clear: both;
+}
+.pascal{
+    float: right;
+    margin-right: 2%;
+}
+.articl>ul { /*lijevo poravnati odlomak*/
+    list-style: decimal; /*brojevi umjesto tocaka*/
+}
+.mailto {
+    font-size: 1.2em;
+    margin-left: 2%;
+    float: left;
+    /*width: 20%;*/
+    /*text-align: center;*/
+    padding-right: 1%;
+}
+.mailto ul {
+    list-style-type: none; /*nema bulleta*/
+}
+#menu_i ul ul a { /*podizbornici*/
+    text-decoration: none; /*bez underlinea*/
+    color: #B29563;
+}
+    
+#menu_i>ul>li>a { /*izbornik*/
+    display: block;
+    color: #B29563;
+    text-decoration: none;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    font-size: 1.2em;
+}
+#menu_i>ul>li {
+    transition: border 0.6s;
+    border-top: 4px solid rgba(0, 0, 0, 0);
+    box-shadow: 10px 10px 20px #00000F; /*izbornik naslovna...*/
+    background-color: rgba(50, 37, 18, 0.89);
+}
+#menu_i>ul>li:hover {
+    border-top: 4px solid green; /*sto se dogodi kad hover*/
+}
+#menu_i a {
+    transition: color 0.6s; /*sto se dogodi na hover*/
+}
+#menu_i a:hover{ /*u izborniku u podizborniku*/
+    color: green;
+}
+.popis_l{
+    margin-left: 2%;
+    width: 55%;
+    box-shadow: 4px 4px 8px #00000F;
+    float:left;
+}
+.popis_l a, .novosti a{
+    color: #B29563;
+    text-decoration: underline;
+    font-weight: 900;
+    font-size: 1.2em;
+    transition: color 0.4s;
+}
+.popis_l ul{
+    list-style-type: none; /*nema bulleta*/
+}
+.popis_l a:hover {
+    color: green;
+}
+
+.articr { /*desno odjeljci*/
+    float: right;
+    font-size: 1.2em;
+    width:45%;
+    margin-right: 2%;
+    font-weight: 700; 
+    text-align: left;
+}
+.articl , .app{ /*nauci odjeljci*/
+    float: left;
+    /*margin-right: 0; */
+    font-size: 1.2em;
+    width:65%;
+    margin-left: 2%;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 1%; /*razmak odjeljaka*/
+    border-radius:0 0 1em 1em; /*lijevo desno dole*/
+}
+
+.zaglavlje {
+   /* height: 3.5%;*/
+    font-size: 1.2em;
+    text-shadow: 2px 2px #000000;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: center;
+}
+#menu_i{
+    display: block;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+#menu_i>ul {
+    display: inline-table;
+    padding-left: 0px;
+    /*overflow: hidden; */
+    width: 100%;
+    margin-bottom: 1%;
+    position: relative;
+}
+
+#menu_i>ul>li{
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 1.1em; 
+    padding-bottom: 0.4%;
+    padding-top: 0.4%;
+    float: left; /*izbornik poslozen*/
+    width: 20%; /*5 puta 20*/
+    display: table-cell; 
+    box-shadow: 4px 4px 8px #00000F;
+    text-align: center;
+    font-weight: 900;
+}
+#menu_i ul ul {
+    /*z-index: 999;*/
+    display: none;
+    padding: 0 0 6px 0;
+    position: absolute;
+    top: 85%;
+    /*overflow: hidden; */
+    font-size: 0.8em;
+    width: 20%; /*sirine ko i gornji blok li*/
+    margin-top: 4.531px;
+    border-radius:0 0 1em 1em; /*zakrivljeno*/
+    box-shadow: 10px 10px 20px #00000F;
+    background-color: rgba(50, 37, 18, 0.89);
+}
+#menu_i ul li:hover ul {
+    display: block; /*prikaze izbornik*/
+}
+#menu_i ul ul li {
+    display: block;
+    position: relative;
+    float: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+.quiz>ul {
+	list-style-type: decimal;
+}
+.quiz ul ul{
+	list-style-type: lower-alpha;
+}
+
+h1, h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.pitagora_img { /*box gifa pit. trokuta*/
+    margin-top: 1%;
+    margin-bottom: 1%;
+    float: right;
+    width: 20%;
+    height: 20%;
+    box-shadow: 10px 10px 20px #00000F;
+    background-color: rgba(50, 37, 18, 0.89);
+    padding: 1% 0 0 1.5%;
+    margin-right: 2%;
+    
+}
+
+#footer {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 0.8em;
+    clear: both;
+    color: green;
+}
